@@ -105,4 +105,37 @@ class ShoppingCartTest {
     }
 
     //MASCOTAS
+    @Test
+    void calculatePriceForLandAnimal_withTwoLegs() {
+        ShoppingCart shoppingCart = new ShoppingCart();
+
+        Product product = new Product(2, null, false, null, null, null, null);
+
+        shoppingCart.addProduct(product);
+
+        assertEquals(shoppingCart.getTotalPrice(), 8.4);
+    }
+
+    @Test
+    void calculatePriceForLandAnimal_withFourLegs() {
+        ShoppingCart shoppingCart = new ShoppingCart();
+
+        Product product = new Product(4, null, false, null, null, null, null);
+
+        shoppingCart.addProduct(product);
+
+        assertEquals(shoppingCart.getTotalPrice(), 16.8);
+    }
+
+    @Test
+    void calculatePriceForLandAnimal_withEightLegs() {
+        ShoppingCart shoppingCart = new ShoppingCart();
+
+        Product product = new Product(8, null, false, null, null, null, null);
+
+        shoppingCart.addProduct(product);
+
+        assertEquals(shoppingCart.getTotalPrice(), 33.6);
+    }
+
 }
