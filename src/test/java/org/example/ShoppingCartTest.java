@@ -5,6 +5,19 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class ShoppingCartTest {
+    //CARTAS MAGIC
+    @Test
+    void calculatePriceForMagicCards_blue() {
+        ShoppingCart shoppingCart = new ShoppingCart();
+
+        Product product = new Product(null, null, false, "blue", null, "Magic: The Gathering - Maga Eternal", null);
+
+        shoppingCart.addProduct(product);
+
+        assertEquals(shoppingCart.getTotalPrice(), 5.0);
+
+    }
+
     @Test
     void calculatePriceForMagicCards_red() {
         ShoppingCart shoppingCart = new ShoppingCart();
@@ -18,17 +31,55 @@ class ShoppingCartTest {
     }
 
     @Test
-    void calculatePriceForMagicCards_blue() {
+    void calculatePriceForMagicCards_green() {
         ShoppingCart shoppingCart = new ShoppingCart();
 
-        Product product = new Product(null, null, false, "blue", null, "Magic: The Gathering - Maga Eternal", null);
+        Product product = new Product(null, null, false, "green", null, "Magic: The Gathering - Maga Eternal", null);
 
         shoppingCart.addProduct(product);
 
-        assertEquals(shoppingCart.getTotalPrice(), 5.0);
+        assertEquals(shoppingCart.getTotalPrice(), 4.40);
 
     }
 
+    @Test
+    void calculatePriceForMagicCards_black() {
+        ShoppingCart shoppingCart = new ShoppingCart();
+
+        Product product = new Product(null, null, false, "black", null, "Magic: The Gathering - Maga Eternal", null);
+
+        shoppingCart.addProduct(product);
+
+        assertEquals(shoppingCart.getTotalPrice(), 6.80);
+
+    }
+
+    @Test
+    void calculatePriceForMagicCards_brown() {
+        ShoppingCart shoppingCart = new ShoppingCart();
+
+        Product product = new Product(null, null, false, "brown", null, "Magic: The Gathering - Maga Eternal", null);
+
+        shoppingCart.addProduct(product);
+
+        assertEquals(shoppingCart.getTotalPrice(), 2.0);
+
+    }
+
+    @Test
+    void calculatePriceForMagicCards_blackLotus() {
+        ShoppingCart shoppingCart = new ShoppingCart();
+
+        Product product = new Product(null, null, false, null, null, "Magic: The Gathering - Black Lotus", null);
+
+        shoppingCart.addProduct(product);
+
+        assertEquals(shoppingCart.getTotalPrice(), 40000.0);
+
+    }
+
+
+    //PRODUCTOS GOURMET
     @Test
     void calculatePriceForWine() {
         ShoppingCart shoppingCart = new ShoppingCart();
@@ -52,4 +103,6 @@ class ShoppingCartTest {
         assertEquals(shoppingCart.getTotalPrice(), 50.0);
 
     }
+
+    //MASCOTAS
 }

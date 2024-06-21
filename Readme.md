@@ -9,7 +9,6 @@ En Random Shop apostamos por el caos como seña de identidad. Cuando alguien vie
 - Mascotas
 - Productos gourmet
 - Cartas Magic
-- Calzado (outlet). 
 
 #### Cuánto cuestan las cosas:
 - Cartas Magic: The Gathering. Estas cartas tienen un precio variable, dependiendo de su <b>color</b>: 
@@ -39,7 +38,7 @@ La antigüedad de las cartas Magic puede influir en su precio.
 
 #### Arañas mascota. 
 Queremos añadir este nuevo producto a nuestra tienda. El precio de una araña mascota se calcula de la siguiente manera:
-- 1.20 euro por cada pata
+- 1.20 euros por cada pata
 - +2 euros si son de color rojo
 - +3 euros si son de color dorado
 - Las arañas apestosas (stinky) están a mitad de precio
